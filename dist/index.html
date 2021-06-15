@@ -7,8 +7,8 @@
     <link href="/css/tailwind.css" rel="stylesheet">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="font-sans antialiased bg-yellow-50">
-    <nav @click.away="showSidebar = false" x-data="{ showSidebar: false }" class="w-full fixed flex flex-col md:flex-row items-center justify-between bg-blueGray-50 inset-x-0 top-0 py-4 px-5 z-20 shadow">
+<body class="font-sans antialiased bg-blueGray-50">
+    <nav @click.away="showSidebar = false" x-data="{ showSidebar: false }" class="w-full fixed flex flex-col md:flex-row items-center justify-between bg-blueGray-50 inset-x-0 top-0 py-4 px-5 z-20 shadow md:px-7">
         <div class="w-full relative flex items-center justify-between md:w-auto md:block md:justify-start">
             <img alt="Ekskul.co.id" src="/img/logo.svg" class="w-auto h-8 md:h-10">
             <button @click="showSidebar = !showSidebar" class="bg-transparent focus:outline-none md:hidden">
@@ -18,7 +18,7 @@
                 </svg>
             </button>
         </div>
-        <div :class="showSidebar ? '' : 'hidden'" class="w-full h-auto inset-x-0 top-12 bg-bluGray-50 pt-2 md:flex">
+        <div :class="showSidebar ? '' : 'hidden'" class="hidden w-full h-auto inset-x-0 top-12 bg-bluGray-50 pt-2 md:flex">
             <ul class="w-full flex flex-col list-none md:flex-row md:items-center md:justify-start md:ml-6">
                 <li>
                     <a href="#" class="text-blueGray-600 block uppercase text-sm font-bold py-2 px-3">Home</a>
@@ -40,7 +40,20 @@
             </div>
         </div>
     </nav>
-    <h1 class="text-2xl p-4 font-medium">Welcome to <span class="bg-yellow-500 font-bold rounded-md text-white px-3 py-2">Ekskul.co.id</span></h1>
+    <section class="w-full h-auto flex flex-col mt-16 px-5 md:flex-row md:items-center md:mt-24 md:px-12">
+        <div class="w-full md:w-3/5">
+            <h1 class="text-3xl font-semibold tracking-tighter text-blueGray-700 mt-6 md:mt-0">Welcome to <span class="bg-yellow-400 font-bold rounded-md text-white px-3 py-2">Ekskul.co.id</span></h1>
+            <p class="text-sm tracking-wider leading-tight text-blueGray-600 mt-5 md:text-base"><span class="font-semibold">Ekskul.co.id</span> adalah sebuah platform kursus online kaya aplikasi sebelah tetapi tidak hanya materi pelajaran sekolah saja terdapat juga untuk umum.</p>
+            <p class="text-base font-semibold mt-4">Gabung sekarang</p>
+            <div class="w-auto flex items-center justify-start mt-2">
+                <a href="#"><img alt="Get it on Google Play" src="/img/googleplay.svg" class="w-auto h-10 mr-2 md:h-14"></a>
+                <a href="#"><img alt="Download on the AppStore" src="/img/appstore.svg" class="w-auto h-10 md:h-14"></a>
+            </div>
+        </div>
+        <div class="w-full hidden justify-center md:flex md:w-2/5">
+            <img alt="Ekskul.co.id" src="/img/splash-ekskul.png" class="w-auto h-96"></a>
+        </div>
+    </section>
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
 </body>
