@@ -1,0 +1,20 @@
+{
+  "name": "Landing-ekskul",
+  "version": "1.0.0",
+  "description": "Landing page Ekskul.co.id",
+  "scripts": {
+    "dev": "TAILWIND_MODE=watch NODE_ENV=development postcss ./src/tailwind.css -o ./dist/css/tailwind.css -w",
+    "build:dev": "TAILWIND_MODE=build NODE_ENV=development postcss ./src/tailwind.css -o ./dist/css/tailwind.css",
+    "build:prod": "TAILWIND_MODE=build NODE_ENV=production postcss ./src/tailwind.css -o ./dist/css/tailwind.css"
+  },
+  "author": "holiq",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.4",
+    "tailwindcss": "^2.1.4"
+  },
+  "dependencies": {
+    "postcss-cli": "^8.3.1"
+  }
+}
