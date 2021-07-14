@@ -7,8 +7,8 @@
     <link href="/css/tailwind.css" rel="stylesheet">
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
-<body class="font-sans antialiased bg-blueGray-50">
-    <nav @click.away="showSidebar = false" x-data="{ showSidebar: false }" class="w-full fixed flex flex-col md:flex-row items-center justify-between bg-blueGray-50 inset-x-0 top-0 py-4 px-5 z-20 shadow md:px-7">
+<body class="font-sans antialiased bg-blueGray-100">
+    <nav @click.away="showSidebar = false" x-data="{ showSidebar: false }" class="w-full fixed flex flex-col md:flex-row items-center justify-between bg-transparent inset-x-0 top-0 py-4 px-5 z-20 shadow md:px-7">
         <div class="w-full relative flex items-center justify-between md:w-auto md:block md:justify-start">
             <img alt="Ekskul.co.id" src="/img/logo.svg" class="w-auto h-8 md:h-10">
             <button @click="showSidebar = !showSidebar" class="bg-transparent focus:outline-none md:hidden">
@@ -18,41 +18,46 @@
                 </svg>
             </button>
         </div>
-        <div :class="showSidebar ? '' : 'hidden'" class="w-full h-auto inset-x-0 top-12 bg-bluGray-50 pt-2 md:flex">
+        <div :class="showSidebar ? '' : 'hidden'" class="w-full h-auto inset-x-0 top-12 bg-transparent pt-2 md:flex md:w-auto">
             <ul class="w-full flex flex-col list-none md:flex-row md:items-center md:justify-start md:ml-6">
                 <li>
-                    <a href="#" class="text-blueGray-600 block uppercase text-sm font-bold py-2 px-3">Home</a>
+                    <a href="#" class="text-blueGray-800 block uppercase text-sm font-bold py-2 px-3">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="text-blueGray-600 block uppercase text-sm font-bold py-2 px-3">About</a>
+                    <a href="#" class="text-blueGray-800 block uppercase text-sm font-bold py-2 px-3">About</a>
                 </li>
                 <li>
-                    <a href="#" class="text-blueGray-600 block uppercase text-sm font-bold py-2 px-3">Benefit</a>
+                    <a href="#" class="text-blueGray-800 block uppercase text-sm font-bold py-2 px-3">Blog</a>
                 </li>
                 <li>
-                    <a href="#" class="text-blueGray-600 block uppercase text-sm font-bold py-2 px-3">Contact</a>
+                    <a href="#" class="text-blueGray-800 block uppercase text-sm font-bold py-2 px-3">Contact</a>
                 </li>
             </ul>
             <div class="w-full border-b border-gray-200 md:hidden"></div>
             <div class="w-full flex flex-row items-center justify-between py-2 px-3 md:w-auto md:justify-end">
-                <a href="#" class="bg-transparent border-2 border-yellow-500 uppercase text-sm font-bold rounded-md text-yellow-500 py-2 px-3 md:mr-2 hover:bg-yellow-500 hover:text-blueGray-50">Login</a>
-                <a href="#" class="bg-yellow-500 uppercase text-sm font-bold rounded-md text-white py-2 px-3 hover:bg-yellow-600">Register</a>
+                <a href="#" class="bg-transparent border-2 border-blueGray-800 uppercase text-sm font-bold rounded-md text-blueGray-800 py-2 px-3 md:mr-2 hover:bg-blueGray-500">Login</a>
+                <a href="#" class="bg-blueGray-800 uppercase text-sm font-bold rounded-md text-white py-2 px-3 hover:bg-blueGray-800">Register</a>
             </div>
         </div>
     </nav>
-    <section class="w-full h-auto flex flex-col mt-16 px-5 md:flex-row md:items-center md:mt-24 md:px-12">
-        <div class="w-full md:w-3/5">
-            <h1 class="text-3xl font-semibold tracking-tighter text-blueGray-700 mt-6 md:mt-0">Welcome to <span class="bg-yellow-400 font-bold rounded-md text-white px-3 py-2">Ekskul.co.id</span></h1>
-            <p class="text-sm tracking-wider leading-tight text-blueGray-600 mt-5 md:text-base"><span class="font-semibold">Ekskul.co.id</span> adalah sebuah platform kursus online kaya aplikasi sebelah tetapi tidak hanya materi pelajaran sekolah saja terdapat juga untuk umum.</p>
-            <p class="text-base font-semibold mt-4">Gabung sekarang</p>
-            <div class="w-auto flex items-center justify-start mt-2">
+    <section class="w-full h-[35rem] bg-orange-300 relative">
+        <div class="w-full h-full relative flex flex-col items-center container mx-auto z-20 md:flex-row md:items-center md:justify-between">
+        <div class="w-full md:w-1/2 h-auto flex flex-wrap flex-col z-10">
+            <h1 class="text-5xl font-bold tracking-tighter text-orange-300 mt-6 md:mt-0">Enhance your skills</h1>
+            <h2 class="text-4xl font-bold tracking-wide leading-none text-blueGray-700 mt-2">Anywhere and anytime</h2>
+            <div class="w-auto flex items-center justify-start mt-4">
                 <a href="#"><img alt="Get it on Google Play" src="/img/googleplay.svg" class="w-auto h-10 mr-2 md:h-14"></a>
                 <a href="#"><img alt="Download on the AppStore" src="/img/appstore.svg" class="w-auto h-10 md:h-14"></a>
             </div>
         </div>
-        <div class="w-full hidden justify-center md:flex md:w-2/5">
-            <img alt="Ekskul.co.id" src="/img/splash-ekskul.png" class="w-auto h-96"></a>
+        <div class="w-full h-auto relative hidden items-center justify-center z-10 md:flex md:w-1/2">
+            <img alt="Ekskul.co.id" src="/img/home-ekskul.png" class="w-auto h-[22rem] mr-8"></a>
+            <img alt="Ekskul.co.id" src="/img/play-course-ekskul.png" class="w-auto h-[22rem]"></a>
+            <img alt="Ekskul.co.id" src="/img/splash-ekskul.png" class="w-auto h-96 absolute z-20"></a>
         </div>
+        </div>
+        <div class="circle"></div>
+        <div class="box"></div>
     </section>
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
