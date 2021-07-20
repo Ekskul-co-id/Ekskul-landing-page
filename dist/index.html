@@ -8,7 +8,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body class="font-sans antialiased bg-blueGray-100">
-    <nav @click.away="showSidebar = false" x-data="{ showSidebar: false }" class="w-full fixed flex flex-col md:flex-row items-center justify-between bg-transparent inset-x-0 top-0 py-4 px-5 z-20 shadow md:px-7">
+    <nav @click.away="showSidebar = false" x-data="{ showSidebar: false }" class="w-full fixed flex flex-col md:flex-row items-center justify-between bg-white bg-opacity-20 backdrop-blur-md inset-x-0 top-0 py-4 px-5 z-50 shadow md:px-7">
         <div class="w-full relative flex items-center justify-between md:w-auto md:block md:justify-start">
             <img alt="Ekskul.co.id" src="/img/logo.svg" class="w-auto h-8 md:h-10">
             <button @click="showSidebar = !showSidebar" class="bg-transparent focus:outline-none md:hidden">
@@ -40,24 +40,29 @@
             </div>
         </div>
     </nav>
-    <section class="w-full h-[35rem] bg-orange-300 relative">
-        <div class="w-full h-full relative flex flex-col items-center container mx-auto z-20 md:flex-row md:items-center md:justify-between">
-        <div class="w-full md:w-1/2 h-auto flex flex-wrap flex-col z-10">
-            <h1 class="text-5xl font-bold tracking-tighter text-orange-300 mt-6 md:mt-0">Enhance your skills</h1>
-            <h2 class="text-4xl font-bold tracking-wide leading-none text-blueGray-700 mt-2">Anywhere and anytime</h2>
-            <div class="w-auto flex items-center justify-start mt-4">
-                <a href="#"><img alt="Get it on Google Play" src="/img/googleplay.svg" class="w-auto h-10 mr-2 md:h-14"></a>
-                <a href="#"><img alt="Download on the AppStore" src="/img/appstore.svg" class="w-auto h-10 md:h-14"></a>
+    <section class="w-full h-[35rem] bg-orange-300 relative md:pt-10">
+        <div class="w-full h-[35rem] relative flex flex-row items-center container px-4 z-20 md:px-0 md:mx-auto md:items-center md:justify-between">
+            <div class="w-full md:w-1/2 h-auto flex flex-wrap flex-col z-10">
+                <h1 class="text-3xl font-bold whitespace-nowrap tracking-tighter text-orange-300 md:text-5xl">Enhance your skills</h1>
+                <h2 class="text-2xl font-bold tracking-wide leading-none text-blueGray-700 mt-2 md:text-4xl">Anywhere and anytime</h2>
+                <div class="w-auto flex items-center justify-start mt-4">
+                    <a href="#"><img alt="Get it on Google Play" src="/img/googleplay.svg" class="w-auto h-8 mr-2 md:h-14"></a>
+                    <a href="#"><img alt="Download on the AppStore" src="/img/appstore.svg" class="w-auto h-8 md:h-14"></a>
+                </div>
             </div>
-        </div>
-        <div class="w-full h-auto relative hidden items-center justify-center z-10 md:flex md:w-1/2">
-            <img alt="Ekskul.co.id" src="/img/home-ekskul.png" class="w-auto h-[22rem] mr-8"></a>
-            <img alt="Ekskul.co.id" src="/img/play-course-ekskul.png" class="w-auto h-[22rem]"></a>
-            <img alt="Ekskul.co.id" src="/img/splash-ekskul.png" class="w-auto h-96 absolute z-20"></a>
-        </div>
+            <div class="w-full h-full relative flex items-center justify-end z-10 md:flex md:justify-center md:w-1/2">
+                <img alt="Ekskul.co.id" src="/img/home-ekskul.png" class="w-auto h-[22rem] hidden mr-8 md:block"></a>
+                <img alt="Ekskul.co.id" src="/img/splash-ekskul.png" class="w-full h-auto absolute z-20 md:w-auto md:h-96"></a>
+                <img alt="Ekskul.co.id" src="/img/play-course-ekskul.png" class="w-auto h-[22rem] hidden md:block"></a>
+            </div>
         </div>
         <div class="circle"></div>
         <div class="box"></div>
+        <div class="hidden">
+            <svg id="visual" viewBox="0 0 1024 480" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <path d="M0 416L9.5 410.3C19 404.7 38 393.3 57 389.8C76 386.3 95 390.7 114 401.7C133 412.7 152 430.3 171 428C190 425.7 209 403.3 227.8 399.8C246.7 396.3 265.3 411.7 284.2 410.3C303 409 322 391 341 389.8C360 388.7 379 404.3 398 405.5C417 406.7 436 393.3 455 387C474 380.7 493 381.3 512 389.5C531 397.7 550 413.3 569 412.7C588 412 607 395 626 395.7C645 396.3 664 414.7 683 425.3C702 436 721 439 739.8 431.7C758.7 424.3 777.3 406.7 796.2 401.5C815 396.3 834 403.7 853 401.2C872 398.7 891 386.3 910 388C929 389.7 948 405.3 967 404.7C986 404 1005 387 1014.5 378.5L1024 370L1024 513L1014.5 513C1005 513 986 513 967 513C948 513 929 513 910 513C891 513 872 513 853 513C834 513 815 513 796.2 513C777.3 513 758.7 513 739.8 513C721 513 702 513 683 513C664 513 645 513 626 513C607 513 588 513 569 513C550 513 531 513 512 513C493 513 474 513 455 513C436 513 417 513 398 513C379 513 360 513 341 513C322 513 303 513 284.2 513C265.3 513 246.7 513 227.8 513C209 513 190 513 171 513C152 513 133 513 114 513C95 513 76 513 57 513C38 513 19 513 9.5 513L0 513Z" fill="#F1F5F9" stroke-linecap="round" stroke-linejoin="miter"></path>
+            </svg>
+        </div>
     </section>
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     <script>eruda.init();</script>
